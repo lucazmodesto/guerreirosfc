@@ -10,46 +10,62 @@
 <body>
 
 <div class="container">
-    <h1>Menu Principal</h1> <!-- Título mais profissional -->
+    <!-- Logo no topo -->
+    <div class="logo-container">
+        <img src="img/logoguerreiros.png" alt="Logo Guerreiros" class="logo">
+    </div>
+
+    
+    <!-- Menu -->
     <div class="menu">
         <a href="#" class="menu-item" id="cadastro-jogadores">
             <i class="fas fa-users"></i> Cadastro de Jogadores
         </a>
-        <a href="#" class="menu-item">
+        <a href="#" class="menu-item" id="cadastro-partidas">
             <i class="fas fa-futbol"></i> Cadastro de Partidas
         </a>
-        <a href="#" class="menu-item">
+        <a href="#" class="menu-item" id="agenda-jogos">
             <i class="fas fa-calendar-alt"></i> Agenda de Jogos
         </a>
-        <a href="#" class="menu-item">
+        <a href="#" class="menu-item" id="dia-jogo">
             <i class="fas fa-clock"></i> Dia de Jogo
         </a>
-        <a href="#" class="menu-item">
+        <a href="#" class="menu-item" id="estatisticas-time">
             <i class="fas fa-trophy"></i> Estatísticas do Time
         </a>
-        <a href="#" class="menu-item">
+        <a href="#" class="menu-item" id="estatisticas-jogadores">
             <i class="fas fa-users-cog"></i> Estatísticas dos Jogadores
         </a>
     </div>
 </div>
 
+<script>
+    document.getElementById('cadastro-jogadores').addEventListener('click', function() {
+        window.location.href = 'cadastro-jogadores.html';
+    });
 
-    <script>
-        // Captura todos os botões de menu
-        const menuItems = document.querySelectorAll('.menu-item');
-        
-        // Adiciona um evento de clique para cada botão
-        menuItems.forEach(item => {
-            item.addEventListener('click', function() {
-                // Remove a classe 'active' de todos os botões
-                menuItems.forEach(i => i.classList.remove('active'));
-                
-                // Adiciona a classe 'active' ao botão clicado
-                this.classList.add('active');
-            });
-        });
-    </script>
- <script src="js/menu.js"></script>
+    document.getElementById('cadastro-partidas').addEventListener('click', function() {
+        window.location.href = 'cadastro-partidas.html';
+    });
+
+    document.getElementById('agenda-jogos').addEventListener('click', function() {
+        window.location.href = 'agenda-jogos.html';
+    });
+
+    document.getElementById('dia-jogo').addEventListener('click', function() {
+        window.location.href = 'dia-jogo.html';
+    });
+
+    document.getElementById('estatisticas-time').addEventListener('click', function() {
+        window.location.href = 'estatisticas-time.html';
+    });
+
+    document.getElementById('estatisticas-jogadores').addEventListener('click', function() {
+        window.location.href = 'estatisticas-jogadores.html';
+    });
+</script>
+
+<script src="js/menu.js"></script>
 
 </body>
 </html>

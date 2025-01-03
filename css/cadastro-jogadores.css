@@ -96,7 +96,18 @@ button:hover {
 .lista-jogadores li:hover {
     background-color: #444;
 }
+/* Logo */
+.logo {
+    text-align: center;
+    margin-bottom: 20px; /* Espaçamento entre o logo e as colunas */
+}
 
+#logo {
+    width: 200px; /* Definir um tamanho fixo para o logo */
+    height: auto; /* Manter a proporção do logo */
+}
+
+}
 .lista-jogadores li .btn-excluir {
     background-color: #ff6f61;
     border: none;

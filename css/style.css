@@ -1,4 +1,10 @@
 /* Estilo global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -14,34 +20,49 @@ body {
 /* Container com efeito de vidro fosco */
 .login-container {
   background: rgba(30, 30, 30, 0.8); /* Fundo semi-transparente */
-  backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+  backdrop-filter: blur(15px); /* Efeito de vidro fosco mais forte */
   border-radius: 16px;
   padding: 40px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8); /* Sombra moderna */
   width: 100%;
-  max-width: 400px;
+  max-width: 380px; /* Tamanho ideal para dispositivos móveis */
   text-align: center;
+  overflow: hidden;
+}
+
+/* Logo do time */
+.logo {
+  max-width: 140px; /* Tamanho do logo ajustado */
+  margin-bottom: 20px; /* Espaçamento abaixo do logo */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Sombra mais suave e grande */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeitos ao passar o mouse */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Aumento suave ao passar o mouse */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9); /* Sombra mais forte no hover */
 }
 
 /* Título estilizado */
 .login-container h1 {
-  font-size: 28px;
-  margin-bottom: 25px;
+  font-size: 26px;
+  margin-bottom: 20px;
   color: #ff4141; /* Vermelho Guerreiros */
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Sombra no texto */
 }
 
 /* Inputs com estilo minimalista */
 .login-container input[type="text"],
 .login-container input[type="password"] {
   width: 100%;
-  padding: 12px 15px;
-  margin: 10px 0;
+  padding: 15px 20px;
+  margin: 12px 0;
   border: none;
-  border-bottom: 2px solid #444; /* Linha fina no campo */
-  border-radius: 0;
-  background: transparent; /* Fundo transparente */
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1); /* Fundo transparente com leve sombra */
   color: #fff;
   font-size: 16px;
   transition: all 0.3s ease;
@@ -49,8 +70,9 @@ body {
 
 .login-container input[type="text"]:focus,
 .login-container input[type="password"]:focus {
-  border-bottom: 2px solid #ff4141; /* Destaque ao focar */
+  background: rgba(255, 255, 255, 0.2); /* Foco mais destacado */
   outline: none;
+  border: 2px solid #ff4141; /* Destacar com borda vermelha */
 }
 
 /* Botão de login */
@@ -58,7 +80,7 @@ body {
   background: linear-gradient(135deg, #ff4141, #e63939); /* Gradiente suave */
   border: none;
   color: #fff;
-  padding: 14px 18px;
+  padding: 15px 20px;
   border-radius: 8px;
   font-size: 16px;
   font-weight: bold;
@@ -68,14 +90,14 @@ body {
 }
 
 .login-container button:hover {
-  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+  transform: scale(1.05); /* Aumento ao passar o mouse */
   background: linear-gradient(135deg, #e63939, #c53030); /* Gradiente mais escuro */
 }
 
 /* Rodapé */
 .footer {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 14px;
   color: #aaa;
   text-align: center;
 }
@@ -93,5 +115,25 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media Query para telas menores */
+@media (max-width: 500px) {
+  .login-container {
+    padding: 30px;
+    max-width: 320px; /* Ajustando o tamanho para dispositivos menores */
+  }
+
+  .logo {
+    max-width: 120px; /* Reduzindo o tamanho do logo em telas pequenas */
+  }
+
+  .login-container h1 {
+    font-size: 22px; /* Ajustando o tamanho da fonte do título */
+  }
+
+  .footer {
+    font-size: 12px; /* Tamanho menor no rodapé */
   }
 }
