@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadastro-jogadores.css">
+    <title>Cadastro de Jogadores</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>>
+<body>
+    <div class="container">
+      
+        <div class="coluna form-cadastro">
+            <h2>Cadastrar Novo Jogador</h2>
+            <form action="javascript:void(0);" method="post">
+                <input type="text" id="nome-completo" placeholder="Nome Completo" required>
+                <input type="text" id="apelido" placeholder="Apelido" required>
+                <input type="number" id="numero-camisa" placeholder="Número da Camisa" required>
+                <input type="date" id="data-nascimento" placeholder="Data de Nascimento" required>
+                <input type="text" id="rg" placeholder="RG" required>
+                <input type="text" id="posicao" placeholder="Posição" required>
+                <button type="submit" id="btn-cadastrar">Cadastrar Jogador</button>
+            </form>
+        </div>
+
+        <!-- Linha separadora -->
+        <div class="separator"></div>
+
+        <!-- Coluna de Lista de Jogadores -->
+        <div class="coluna lista-jogadores">
+            <h2>Jogadores Cadastrados</h2>
+            <ul id="lista-jogadores">
+                <!-- Jogadores serão listados aqui com a opção de exclusão -->
+                <!-- Exemplo:
+                <li>
+                    Apelido - Camisa 10
+                    <button class="btn-excluir">Excluir</button>
+                </li>
+                -->
+            </ul>
+            <button id="gerar-relatorio">Gerar Relatório Completo</button>
+        </div>
+    </div>
+
+    <script src="js/cadastro-jogadores.js"></script>
+</body>
+</html>

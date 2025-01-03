@@ -1,0 +1,112 @@
+/* menu.css */
+
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000; /* Fundo preto */
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Texto branco */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Ajustando o título do Menu Principal */
+h1 {
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    font-weight: bold;
+    font-size: 48px; /* Tamanho grande */
+    letter-spacing: 2px; /* Distância entre as letras */
+    color: #ff6f61; /* Cor vibrante, mas profissional */
+    text-transform: uppercase; /* Tudo em maiúsculas */
+    margin-bottom: 30px;
+    opacity: 0; /* Começar invisível para animação */
+    animation: fadeIn 1s forwards; /* Animação suave de entrada */
+}
+
+/* Animação de fadeIn */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.menu a {
+    background-color: transparent;
+    color: #ff6f61;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 15px;
+    border: 2px solid #ff6f61;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    width: 220px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu a:hover {
+    background-color: #ff6f61;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.menu a.active {
+    background-color: #ff6f61;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.6);
+}
+
+.menu a:focus {
+    outline: none;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .menu a {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
